@@ -203,8 +203,8 @@ weather-monitoring-system/
 ### **1. Environment Setup**
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd weather-monitoring-system
+git clone https://github.com/Brijes987/WeatherPulse.git
+cd WeatherPulse
 
 # Copy environment template
 cp .env.example .env
