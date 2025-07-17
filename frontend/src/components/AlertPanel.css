@@ -1,0 +1,266 @@
+.alert-panel {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.alert-header h2 {
+  margin: 0;
+  color: #333;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.alert-filter {
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.alert-filter:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.alert-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.alert-breakdown {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.alert-breakdown h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.breakdown-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.breakdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.breakdown-icon {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.breakdown-label {
+  flex: 1;
+  text-align: left;
+  color: #666;
+}
+
+.breakdown-count {
+  font-weight: bold;
+  color: #333;
+  background: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  min-width: 30px;
+  text-align: center;
+}
+
+.alert-list h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-weight: 400;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+.no-alerts {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.no-alerts-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.no-alerts-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-top: 5px;
+}
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.alert-item.active {
+  background: #fff3cd;
+  border-left-color: #ffc107;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);
+}
+
+.alert-item.resolved {
+  background: #d4edda;
+  border-left-color: #28a745;
+  opacity: 0.8;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-header-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.alert-icon {
+  font-size: 1.2rem;
+}
+
+.alert-city {
+  font-weight: 500;
+  color: #333;
+}
+
+.alert-time {
+  font-size: 0.8rem;
+  color: #666;
+  margin-left: auto;
+}
+
+.alert-message {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.alert-details {
+  font-size: 0.8rem;
+  color: #777;
+  font-style: italic;
+}
+
+.resolve-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.resolve-btn:hover {
+  background: #218838;
+  transform: scale(1.1);
+}
+
+.resolved-badge {
+  background: #28a745;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .alert-panel {
+    padding: 15px;
+  }
+  
+  .alert-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .alert-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .breakdown-items {
+    gap: 8px;
+  }
+  
+  .alert-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .resolve-btn, .resolved-badge {
+    align-self: flex-end;
+  }
+}
